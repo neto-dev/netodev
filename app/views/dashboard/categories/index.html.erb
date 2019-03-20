@@ -1,0 +1,41 @@
+<section id="dashboard-categories pd-container">
+  <article class="categories col-15 pd-item">
+    <div class="pd-item-flex fc-text no-margin-gb padding-main-topbar xl-padding-bt-gb justify-between">
+      <h1 class="no-margin-gb-gb no-padding-gb-gb xl-title-light-gb">Categorias</h1>
+      <div>
+        <%= link_to 'Nueva Categoria', new_dashboard_category_path, class: "fc-white bg-blue lg-border-radio md-padding-x-gb lg-padding-y-gb" %>
+      </div>
+    </div>
+    <hr>
+    <% if @categories != nil %>
+      <div class="content pd-container justify-left">
+        <% @categories.each do |category| %>
+          <div class="category md-border-radio bg-white col-5 xl-margin-gb-gb ">
+            <div class="pd-item-flex justify-between aling-center">
+              <h2 class="fc-text md-padding-gb-gb md-title-light-gb no-margin-gb-gb">
+                <%= category.name %>
+              </h2>
+              <div class="menu md-padding-gb-gb pd-flex">
+                <%= link_to edit_dashboard_category_path(category.id), class: "text-xl fc-green md-margin-gb-gb" do %>
+                  <span class="ion-ios-compose-outline"></span>
+                <% end %>
+                <%= link_to dashboard_category_path(category), method: :delete, class: "text-xl fc-green md-margin-gb-gb", data: { confirm: '¿Estas seguro?' } do%>
+                  <span class="ion-ios-trash-outline"></span>
+                <% end %>
+              </div>
+            </div>
+            <hr>
+            <div>
+              <p class="fc-text md-text lg-padding-x-gb md-padding-y-gb no-margin-gb-gb"> <%= category.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <h2 class="no-margin-gb-gb padding-main-topbar lg-title-light-gb fc-text text-center">
+        No se encuentra ninguna categoria registrada
+      </h2>
+    <% end %>
+  </article>
+</section>
+

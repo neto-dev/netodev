@@ -1,0 +1,131 @@
+<% @title = @publication.title + " | Diseñalia" %>
+
+<div class="pd-container xl-padding-tp-gb xl-margin-tp-gb">
+    <div class="col-5 pd-item-flex justify-center">
+        <a class="sm-border-gb-gb xl-padding-y-gb md-padding-x-gb fc-white sm-title-bold-gb" href="/categoria/<%= @publication.category.id %>">
+            <%= @publication.category.name %> 
+        </a>
+    </div>
+</div>
+
+<div class="col-16 pd-container justify-between xl-padding-x-gb">
+    <div class="col-20">
+        <h1 class="fc-white lg-padding-gb-gb big-title-bold-gb text-center">
+            <%= @publication.title %>
+        </h1>
+    </div>
+
+</div>
+
+<div class="col-16 pd-item-flex justify-between xl-padding-bt-gb">
+    <div class="pd-item-flex justify-center fc-white">
+        <p class="md-title-bold-gb lg-margin-rg-gb">
+        <%= @publication.created_at.strftime("%d/%m/%y") %>   
+        </p>
+        <p class="md-title-bold-gb lg-margin-rg-gb">
+        |
+        </p>
+        <p class="md-title-bold-gb lg-margin-rg-gb">
+        <%= @publication.created_at.strftime("%H:%M") %>   
+        </p>
+        <p class="md-title-bold-gb lg-margin-rg-gb">
+        |
+        </p>
+
+        <a href="" class="fc-white xl-title-bold-gb md-padding-gb-gb lg-margin-rg-gb"><span class="ion-social-facebook"></span></a>
+        <p class="md-title-bold-gb lg-margin-rg-gb">
+        |
+        </p>
+        <a href="" class="fc-white xl-title-bold-gb md-padding-gb-gb"><span class="ion-social-twitter"></span></a>
+    </div>
+</div>
+
+
+<div class="col-12 pd-container xl-margin-x-gb xl-padding-gb-gb publication-preview">
+    <div class="fc-white lg-title-bold-gb fc-white" style="line-height: 30px">
+        <%= @publication.preview %>
+    </div>
+</div>
+
+
+<div class="col-10 xl-padding-x-gb">
+    <%= cl_image_tag(@publication.image, class: "full-image")%>
+</div>
+
+<div class="col-12 xl-padding-x-gb md-title-light-gb fc-white" style="line-height: 28px">
+    <%= markdown(@publication.article)%>
+</div>
+
+<div class="author pd-container justify-center xl-padding-x-gb xl-margin-x-gb">
+    <div class="col-8 text-center">
+        <figure class="photo-author">
+            <% if @publication.user.avatar %>
+                <%= cl_image_tag(@publication.user.avatar, class: "avatar")%>
+            <% else %>
+                <img src="https://api.adorable.io/avatars/100/<%= @publication.user.email%>" class="avatar">
+            <% end %>
+        </figure>
+
+        <h3 class="lg-title-light-gb fc-white">
+            by: <%= @publication.user.first_name%> <%= @publication.user.last_name%>
+        </h3> 
+    </div>
+</div>
+
+
+<article class="xl-padding-x-gb pd-container" style="background-color: #f0f2fa">
+    <div class="col-12 xl-padding-x-gb">
+        <h1 class="lg-title-light-gb">Deja un Comentario</h1>
+        <div class="comments">
+            <div class="comment-wrap">
+                <div class="photo">
+                    <div class="avatar" style="background-image: url('https://api.adorable.io/avatars/100/<%= rand(5..30) %>')"></div>
+                </div>
+                <div class="comment-block">
+                    <%= form_for(@comment) do |f| %>
+                        <%= f.text_field :author, class: "full-width sm-padding-x-gb lg-padding-y-gb md-margin-x-gb", placeholder: "Nombre Completo", class: "input-comment" %>
+                        <%= f.text_field :email, class: "full-width sm-padding-x-gb lg-padding-y-gb md-margin-x-gb", placeholder: "Correo Electronico", class: "input-comment"%>
+                        <%= f.text_area :content, class: "full-width sm-padding-x-gb lg-padding-y-gb md-margin-x-gb", placeholder: "Agregar Comentario...", class: "textarea-comment" %>
+                        <%= f.hidden_field :publication_id, value: @publication.id %>
+                        <%= f.submit "Enviar Comentario", class: "fc-white bg-dark no-margin-gb-gb xl-margin-x-gb sm-title-bold-gb md-padding-x-gb xl-padding-y-gb pointer float-right" %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="xl-padding-x-gb xl-margin-tp-gb lg-title-light-gb text-center">Comentarios</h1>
+        <div class="pd-container justify-center"> 
+            <% if @comments.first == nil%>
+                <h2 class="sm-title-light-gb">Sin Comentarios. Se el primero en comentar....</h2>
+            <% else %>
+                <% @comments.each do |comment|%>
+                    <div class="comment col-18">
+                        <!-- Comment Avatar -->
+                        <div class="comment-avatar">
+                            <img src="https://api.adorable.io/avatars/100/<%= comment.email%>">
+                        </div>
+
+                        <!-- Comment Box -->
+                        <div class="comment-box">
+                            <div class="comment-text">
+                                <%= comment.content %>
+                            </div>
+                            <div class="comment-footer">
+                                <div class="comment-info">
+                                    <span class="comment-author">
+                                        <a href="">
+                                            <%= comment.author %>
+                                        </a>
+                                    </span>
+                                    <span class="comment-date"><%= comment.created_at.strftime("%d/%m/%y") %></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+
+    </div>
+</article>

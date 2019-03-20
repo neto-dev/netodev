@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= @title%></title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+        <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <%= favicon_link_tag asset_path('favicon.png') %>
+    </head>
+    <body>
+
+        <main class="pd-container">
+            <nav class="pd-item-flex bg-white justify-between lg-padding-x-gb">
+                <div class="col-16 pd-item-flex justify-between">
+                    <div class="col-8"> 
+                        <a href="/"><%= image_tag "logo-dark.png", class: "xl-padding-x-gb", style: "width: 150px"%></a>
+                        </div>
+                    <div class="col-4 pd-item-flex justify-center">
+                        <a href="" class="fc-dark xl-title-bold-gb md-padding-gb-gb"><span class="ion-social-facebook"></span></a>
+                        <a href="" class="fc-dark xl-title-bold-gb md-padding-gb-gb"><span class="ion-social-twitter"></span></a>
+                    </div>
+                    <div class="col-8 text-right">
+                        <form action="/buscar/" name="search_form" class="form_sch pd-item-flex justify-right" method="get">
+                            <input type="text" name="search" placeholder="BUSCAR" class="fc-white bg-dark xl-padding-y-gb md-padding-x-gb" required>
+                            <a href="javascript:document.search_form.submit()" id="search-disena"><span class="ion-android-search"></span></a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <section class="pd-container">
+                <%= yield %>
+            </section>
+            <footer class="col-20 xl-padding-x-gb">
+                <div class="col-16 pd-item-flex justify-between">
+                    <div class="col-6">
+                        <%= image_tag "logo-dark.png", class: "xl-padding-x-gb full-image"%>
+                        <div class="fc-dark">
+                            Diseñalia es un blog  de difusión de temas referentes al diseño gráfico y sus diversas ramificaciones.
+                        </div>
+                    </div>
+                    <div class="col-7 text-center">
+                        <div class="col-13 margin-center">
+                            <%= image_tag "logo-cromantis.png", class: "xl-padding-x-gb full-image"%>
+                        </div>
+
+                        <div class="fc-dark sm-title-bold-gb">
+                            Todos los derechos reservados © 2017
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="col-20 xl-padding-x-gb pd-container justify-center bg-dark">
+                <div class="pd-item-flex fc-white text-center col-10 justify-center">
+                    <div class="sm-padding-gb-gb md-title-bold-gb">Made with</div>
+                    <div class="sm-padding-gb-gb md-title-bold-gb"><span class="ion-ios-heart"></span></div>
+                    <div class="sm-padding-gb-gb md-title-bold-gb">by Sargento Robot</div>
+                </div>
+            </div>
+        </main>
+
+
+    </body>
+</html>
+

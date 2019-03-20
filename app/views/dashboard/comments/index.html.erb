@@ -1,0 +1,48 @@
+<article class="col-20 pd-container justify-center xl-padding-x-gb">
+  <div class="col-14 xl-padding-x-gb">
+    <table class="p-table">
+      <thead class="p-head-table">
+        <tr>
+          <th>
+            Nombre
+          </th>
+          <th>
+            Correo
+          </th>
+          <th>
+            Comentario
+          </th>
+          <th>
+            Eliminar
+          </th>
+        </tr>
+      </thead>
+      <tbody class="p-body-table">
+        <% if @comments == nil %>
+          <tr>
+            <td colspan="4"> No se encontro ningun comentario</td>
+          </tr>
+        <% else %>
+          <% @comments.each do |comment| %>
+            <tr>
+              <td>
+                <%= comment.author %>
+              </td>
+              <td>
+                <%= comment.email %>
+              </td>
+              <td>
+                <%= comment.content %>
+              </td>
+              <td>
+                <%= link_to dashboard_comment_path(comment), method: :delete, class: "text-xl fc-green md-margin-gb-gb", data: { confirm: '¿Estas seguro?' } do%>
+                  <span class="ion-ios-trash-outline"></span>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</article>

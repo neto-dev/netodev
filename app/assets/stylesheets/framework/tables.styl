@@ -1,0 +1,198 @@
+  //En este archivo se escribiran los diseños a utilizar para tablas en nuestro proyecto
+//Duda sobre alguna clase preguntar a Ernesto.
+
+.dataTables_wrapper
+  padding: 30px 0
+
+.p-table
+  border-collapse: collapse;
+  border none !important
+  padding: 30px 0 !important
+  width: 100% !important
+  & .p-head-table
+    overflow: hidden;
+    border-radius: 5px 5px 0 0
+    & tr
+      background Dark
+      border-bottom: 1px solid rgb(233, 233, 233) !important
+      & th
+        padding: 15px
+        font-weight: normal;
+        font-size: 13.5px
+        color: Dark
+        border-bottom: 1px solid rgb(233, 233, 233) !important
+      & td
+        padding: 15px
+        font-weight: normal;
+        font-size: 13px
+        color: Dark
+        border-bottom: 1px solid rgb(233, 233, 233) !important
+  & .p-body-table
+    & tr
+      &:nth-child(2n)
+        background Dark
+        border-bottom: 1px solid rgb(233, 233, 233)
+        border-top: 1px solid rgb(233, 233, 233)
+      &:nth-child(odd)
+        background: white
+      & th
+        padding: 25px 15px
+        font-weight: normal;
+        font-size: 12px
+        color text-gray-medium
+      & td
+        padding: 25px 15px
+        font-weight: normal;
+        font-size: 12px
+        color text-gray-medium
+
+.p-blue-text-cell
+  color: blue-green-plif !important
+
+.p-image-and-text-cell
+  display: flex;
+  align-items: stretch;
+  justify-content: left;
+  & figure
+    margin: 5px 10px
+    overflow hidden
+    border-radius 4px
+    margin 0 auto
+    height 60px
+    width 60px
+    & img
+      height: 100%;
+      min-width: 100%;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+  & p
+    width: 250px
+    margin: 5px 15px
+
+.dataTables_paginate
+  float: right;
+
+.p-action-table
+  position: relative;
+  margin: 0 auto
+  width: 200px
+  & .p-action-main
+    border-radius: white
+    width: 200px
+    background: rgb(159, 159, 159)
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 5px
+    position: relative;
+    & p
+      text-align: center;
+      padding: 10px 20px
+      margin 0
+      width: 150px
+      border-right: 2.5px solid white
+      & a
+        font-size: 15px
+        color white
+    & .icon-more
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 0
+      margin: 0 12px
+      margin-top -5px
+      color white
+      font-size: 16px
+      transform: rotate(90deg);
+    & .p-action-second
+      display: none
+      position: absolute;
+      top: 45px
+      left: 0
+      border-radius: 5px
+      width: 125px
+      z-index: 10
+      & ul
+        margin 0
+        padding: 0
+        & li
+          margin 0
+          padding: 10px
+          & a
+            font-size: 15px
+            color white
+          &.p-delete-table
+            background rgb(215, 58, 58)
+
+.dataTables_length
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  & label
+    color: text-gray-medium
+  & select
+    background: white
+    border 1px solid text-gray-light
+    padding: 4px 10px
+    border-radius: 5px
+    font-size: 15px
+    margin-left: 15px
+    color blue-green-plif
+
+.dataTables_wrapper .dataTables_paginate
+  font-size: 0
+  .paginate_button
+    &.previous, &.next
+      background white !important
+      display inline-block !important
+      font-size 15px !important
+      width 33px !important
+      height 33px !important
+      text-align center !important
+      line-height 33px !important
+      color blue-green-plif !important
+      margin 0 !important
+      padding: 0 !important
+      box-shadow inset 0 0 1px rgba(0,0,0,0.20) !important;
+      &:hover
+        color blue-green-plif !important
+        border: none !important
+  & span
+    font-size 0
+    margin 0
+    & .paginate_button
+      background white !important
+      display inline-block !important
+      font-size 15px !important
+      width 33px !important
+      height 33px !important
+      text-align center !important
+      line-height 33px !important
+      color blue-green-plif !important
+      margin 0 !important
+      padding: 0 !important
+      box-shadow inset 0 0 1px rgba(0,0,0,0.20) !important;
+      &.current
+        margin 0 !important
+        background white !important
+        font-size 15px !important
+        color blue-green-plif !important
+        font-weight bold !important
+        width 33px !important
+        height 33px !important
+        text-align center !important
+        line-height 33px !important
+        display inline-block !important
+        margin 0 !important
+        padding: 0 !important
+        box-shadow inset 0 0 1.5px rgba(0,0,0,0.35) !important;
+        &:hover
+          color blue-green-plif !important
+          border: none !important
+      &:hover
+        color blue-green-plif !important
+        border: none !important
+        font-weight bold !important
+
+.dataTables_info
+  color: #6f6f6f !important

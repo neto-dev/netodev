@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= @title%></title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+        <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <%= favicon_link_tag asset_path('favicon.png') %>
+    </head>
+    <body>
+
+        <main class="pd-container bg-dark">
+            <nav class="pd-item-flex justify-between lg-padding-x-gb">
+                <div class="col-16 pd-item-flex justify-center">
+                    <div class="col-15 pd-item-flex justify-center">
+                        <a href="/" class="lg-title-light-gb fc-white lg-padding-y-gb">Inicio</a>
+                        <a href="https://github.com/neto-dev" class="lg-title-light-gb fc-white lg-padding-y-gb">Github</a>
+                        <a href="https://medium.com/@netodev" target="_blank" class="lg-title-light-gb fc-white lg-padding-y-gb">Medium</a>
+                        <a href="https://www.dropbox.com/s/2t7279hlcvzy2e3/curriculum.pdf?dl=0" class="lg-title-light-gb fc-white lg-padding-y-gb">CV PDF</a>
+                        <a href="mailto:hola@netodev.me" class="lg-title-light-gb fc-white lg-padding-y-gb">Contacto</a>
+                        <a href="https://twitter.com/neto_dev" class="fc-white xl-title-bold-gb md-padding-gb-gb"><span class="ion-social-twitter"></span></a>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="pd-container">
+                <%= yield %>
+            </section>
+            <footer class="col-20 xl-padding-x-gb">
+
+            </footer>
+            <div class="col-20 xl-padding-x-gb pd-container justify-center bg-dark">
+                <div class="pd-item-flex fc-white text-center col-10 justify-center">
+                    <div class="sm-padding-gb-gb md-title-bold-gb">Made with</div>
+                    <div class="sm-padding-gb-gb md-title-bold-gb"><span class="ion-ios-heart"></span></div>
+                    <div class="sm-padding-gb-gb md-title-bold-gb">by Sargento Robot</div>
+                </div>
+            </div>
+        </main>
+
+
+    </body>
+</html>

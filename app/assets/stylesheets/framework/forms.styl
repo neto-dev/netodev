@@ -1,0 +1,227 @@
+.p-form
+  padding:  30px 0
+  width: 100%
+  & .p-container
+    width: 60%;
+    margin: 0 auto;
+    & h1
+      margin 0
+      border-bottom 2px solid rgb(194, 194, 194)
+      padding 30px 0 15px 0
+      text-align center
+      color rgb(105, 105, 105)
+      display block
+      font-size 29px
+      width 100%
+    & form
+      width: 100%
+& .select-full
+  & select
+    width: 100% !important
+& .select-1-3
+  display: flex;
+  justify-content: space-between
+  & select
+    width: 30% !important
+& .p-field
+  margin: 20px 0
+  & h3
+    color rgb(105, 105, 105)
+    display block
+    font-size 13px
+    width 100%
+    font-weight: 700
+  & label
+    color rgb(105, 105, 105)
+    display block
+    font-size 13px
+    width 100%
+  & input[type="text"], input[type="tel"], input[type="email"], input[type="password"]
+    border 1px solid rgb(194, 194, 194)
+    border-radius 4px
+    padding 8px 15px
+    font-size 17px
+    color rgb(105, 105, 105)
+    width 100%
+  &  input[type="number"],input[type="date"]
+    border 1px solid rgb(194, 194, 194)
+    border-radius 4px
+    padding 8px 15px
+    font-size 17px
+    color rgb(105, 105, 105)
+    width 50%
+  & select
+    border 1px solid rgb(194, 194, 194)
+    border-radius 4px
+    padding 8px 15px
+    font-size 17px
+    color rgb(105, 105, 105)
+    width 50%
+    background: white
+  & textarea
+    border 1px solid rgb(194, 194, 194)
+    border-radius 4px
+    padding 8px 15px
+    font-size 17px
+    max-height 200px
+    min-height 200px
+    height 200px
+    color rgb(105, 105, 105)
+    max-height 100%
+    min-height 100%
+    width 100%
+& .p-check-status
+  position relative
+  padding 10px 0
+  & h3
+    margin 0
+    padding 10px 0
+    color rgb(105, 105, 105)
+    display block
+    font-size 13px
+    width 100%
+    font-weight: 700
+  input[type=radio]
+    display none
+  & .switch
+    display inline-block
+    position relative
+    width 140px
+    height 40px
+    text-align center
+    background #4cd964
+    transition all 0.2s ease
+    margin 10px
+    border-radius 25px
+    span
+      position absolute
+      width 20px
+      height 4px
+      top 50%
+      left 50%
+      margin -2px 0px 0px -4px
+      background white
+      display block
+      transform rotate(-45deg)
+      transition all .2s ease
+      border-radius 2px
+      &:after
+        content ""
+        display block
+        position absolute
+        width 4px
+        height 12px
+        margin-top -8px
+        background white
+        transition all .2s ease
+        border-radius 2px
+    & label
+      cursor pointer
+      color rgba(#000, .2)
+      width 60px
+      line-height 40px
+      transition all 0.2s ease
+    & label[for=yes]
+      position absolute
+      left 0px
+      height 20px
+    & label[for=no]
+      position absolute
+      right 0px
+  #no:checked ~ .switch
+    background red
+  #no:checked ~ .switch span
+    background white
+    margin-left -8px
+    &:after
+      background white
+      height 20px
+      margin-top -8px
+      margin-left 8px
+  #yes:checked ~ .switch label[for=yes]
+    color white
+  #no:checked ~ .switch label[for=no]
+    color white
+& .p-content-all-radios
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap wrap
+  & .p-content-radio
+    position relative
+    margin 0 10px
+    overflow hidden
+    & label
+      border-radius: 3px;
+      border: 1px solid #D1D3D4
+      padding-right 15px
+    & input, input[type="radio"]
+      &.radio:empty
+        margin-left: -999px;
+      &.radio:empty ~ label
+        position: relative;
+        line-height: 2.5em;
+        text-indent: 3.25em;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      &.radio:empty ~ label:before
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 2.5em;
+        background: #D1D3D4;
+        border-radius: 3px 0 0 3px;
+      &.radio:hover:not(:checked) ~ label:before
+        content:'\2714';
+        text-indent: .9em;
+        color: #C2C2C2;
+      &.radio:hover:not(:checked) ~ label
+        color: #888;
+      &.radio:checked ~ label:before
+        content:'\2714';
+        text-indent: .9em;
+        color: #ffffff;
+        background-color: #4DCB6D;
+      &.radio:checked ~ label
+        color: #777;
+& .p-dates
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
+  width 100%
+  & .p-field-date
+    padding 10px
+    width 50%
+    & label
+      color rgb(105, 105, 105)
+      display block
+      font-size 13px
+      width 100%
+    & input[type="text"], input[type="number"]
+      border 1px solid rgb(194, 194, 194)
+      border-radius 4px
+      padding 8px 15px
+      text-align left !important
+      font-size 17px
+      color rgb(105, 105, 105)
+      width 100%
+& .p-save
+  color white
+  cursor: pointer;
+  background #4CAF50
+  display block
+  text-align center
+  border-radius 4px
+  padding 11px
+  text-decoration none
+  width 200px
+  margin 15px
+  border none
+  font-size 18px
+  margin 0 auto

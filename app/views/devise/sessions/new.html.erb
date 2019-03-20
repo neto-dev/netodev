@@ -1,0 +1,42 @@
+<% @title = "Acceso a Administracion | Blog de Diseño"%>
+
+<article class="bg-white col-20 xl-padding-x-gb">
+  <div class="pd-container col-15 xl-padding-x-gb justify-center">
+    <div class="col-12 text-center">
+      <a href="/">
+        <%= image_tag "logo-dark.png", class: "xl-padding-x-gb"%>
+      </a>
+    </div>
+    <div class="col-11 bg-silver xl-padding-gb-gb md-border-radio">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name),:html => {:class => "p-form floating-labels xl-padding-x-gb"}) do |f| %>
+        <div class="p-field">
+          <%= f.label :email, "Correo Electronico", :class => "p-label" %>
+          <%= f.email_field :email, autofocus: true, class: "email", required: true, autocomplete: "off" %>
+        </div>
+
+        <div class="p-field">
+          <%= f.label :password, "Contraseña", class: "p-label" %>
+          <%= f.password_field :password, autocomplete: "off", class: "key", required: true %>
+        </div>
+
+        <% if flash[:alert] %>
+            <div class="notice item-center fc-red">
+              <%= flash[:alert] %>
+            </div>
+        <% end %>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, "Mantener Sesión" %>
+          </div>
+        <% end -%>
+
+        <div class="actions xl-padding-x-gb">
+          <%= f.submit "Ingresar", class: "p-save" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</article>

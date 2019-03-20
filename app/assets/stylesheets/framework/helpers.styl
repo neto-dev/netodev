@@ -1,0 +1,1942 @@
+/*
+Reglas para llamar una clase helper
+  1.- Dimensión de atributo
+     + no (para eliminar atributo)
+     + sm
+     + md
+     + lg
+     + xl
+  2.- Nombre del atributo ejem. "padding, margin,border,etc"
+  3.- Lado donde se quiere ubicar el atributo
+    + tp (top)
+    + bt (bottom)
+    + lf (left)
+    + rg (rigth)
+    + x (Eje X)
+    + y (Eje Y)
+    + gb (global)
+  4.- A partir de que resolucón se quiere aplicar
+      + sm (small 480px)
+      + md (medium 768px)
+      + lg (large 1024px)
+      + xl (extra large 1440px)
+      + gb (Toda las resoluciones)
+ Cada uno separado por guiones medios
+  Ejem.
+  sm-padding-tp-gb = padding-top: 5px
+
+*/
+
+.full-image
+  width 100%
+
+.full-width
+  width 100%
+
+.margin-center
+  margin-left auto
+  margin-right auto
+
+
+/** PADDINGS **/
+.padding-main-topbar
+  padding-top: 60px
+
+/** PADDINGS RESOLUCION GLOBAL */
+.no-padding-gb-gb
+  padding: 0
+.sm-padding-gb-gb
+  padding: 5px
+.md-padding-gb-gb
+  padding: 8px
+.lg-padding-gb-gb
+  padding: 15px
+.xl-padding-gb-gb
+  padding: 20px
+
+/** PADDINGS TOP */
+.no-padding-tp-gb
+  padding: 0
+.sm-padding-tp-gb
+  padding-top: 5px
+.md-padding-tp-gb
+  padding-top: 8px
+.lg-padding-tp-gb
+  padding-top: 15px
+.xl-padding-tp-gb
+  padding-top: 20px
+
+/** PADDINGS BOTTOM */
+.no-padding-bt-gb
+  padding-bottom: 0
+.sm-padding-bt-gb
+  padding-bottom: 5px
+.md-padding-bt-gb
+  padding-bottom: 8px
+.lg-padding-bt-gb
+  padding-bottom: 15px
+.xl-padding-bt-gb
+  padding-bottom: 20px
+
+/** PADDINGS LEFT */
+.no-padding-lf-gb
+  padding-left: 0
+.sm-padding-lf-gb
+  padding-left: 5px
+.md-padding-lf-gb
+  padding-left: 8px
+.lg-padding-lf-gb
+  padding-left: 15px
+.xl-padding-lf-gb
+  padding-left: 20px
+
+/** PADDINGS RIGTH */
+.no-padding-rg-gb
+  padding-right: 0
+.sm-padding-rg-gb
+  padding-right: 5px
+.md-padding-rg-gb
+  padding-right: 8px
+.lg-padding-rg-gb
+  padding-right: 15px
+.xl-padding-rg-gb
+  padding-right: 20px
+
+/** PADDINGS EJE X */
+.no-padding-x-gb
+  padding-top: 0
+  padding-bottom: 0
+.sm-padding-x-gb
+  padding-top: 5px
+  padding-bottom: 5px
+.md-padding-x-gb
+  padding-top: 8px
+  padding-bottom: 8px
+.lg-padding-x-gb
+  padding-top: 15px
+  padding-bottom: 15px
+.xl-padding-x-gb
+  padding-top: 20px
+  padding-bottom: 20px
+
+/** PADDINGS EJE Y */
+.no-padding-y-gb
+  padding-left: 0
+  padding-right: 0
+.sm-padding-y-gb
+  padding-left: 5px
+  padding-right: 5px
+.md-padding-y-gb
+  padding-left: 8px
+  padding-right: 8px
+.lg-padding-y-gb
+  padding-left: 15px
+  padding-right: 15px
+.xl-padding-y-gb
+  padding-left: 20px
+  padding-right: 20px
+
+/** PADDINGS PARA RESOLUCIÓN A PARTIR DE 480px */
+@media all and (min-width: 480px )
+  .no-padding-gb-sm
+    padding: 0
+  .sm-padding-gb-sm
+    padding-top: 5px
+  .md-padding-gb-sm
+    padding: 8px
+  .lg-padding-gb-sm
+    padding: 15px
+  .xl-padding-gb-sm
+    padding: 20px
+
+  /** PADDINGS TOP */
+  .no-padding-tp-sm
+    padding: 0
+  .sm-padding-tp-sm
+    padding-top: 5px
+  .md-padding-tp-smsm
+    padding-top: 8px
+  .lg-padding-tp-sm
+    padding-top: 15px
+  .xl-padding-tp-sm
+    padding-top: 20px
+
+  /** PADDINGS BOTTOM */
+  .no-padding-bt-sm
+    padding-bottom: 0
+  .sm-padding-bt-sm
+    padding-bottom: 5px
+  .md-padding-bt-sm
+    padding-bottom: 8px
+  .lg-padding-bt-sm
+    padding-bottom: 15px
+  .xl-padding-bt-sm
+    padding-bottom: 20px
+
+  /** PADDINGS LEFT */
+  .no-padding-lf-sm
+    padding-left: 0
+  .sm-padding-lf-sm
+    padding-left: 5px
+  .md-padding-lf-sm
+    padding-left: 8px
+  .lg-padding-lf-sm
+    padding-left: 15px
+  .xl-padding-lf-sm
+    padding-left: 20px
+
+  /** PADDINGS RIGTH */
+  .no-padding-rg-sm
+    padding-right: 0
+  .sm-padding-rg-sm
+    padding-right: 5px
+  .md-padding-rg-sm
+    padding-right: 8px
+  .lg-padding-rg-sm
+    padding-right: 15px
+  .xl-padding-rg-sm
+    padding-right: 20px
+
+  /** PADDINGS EJE X */
+  .no-padding-x-sm
+    padding-top: 0
+    padding-bottom: 0
+  .sm-padding-x-sm
+    padding-top: 5px
+    padding-bottom: 5px
+  .md-padding-x-sm
+    padding-top: 8px
+    padding-bottom: 8px
+  .lg-padding-x-sm
+    padding-top: 15px
+    padding-bottom: 15px
+  .xl-padding-x-sm
+    padding-top: 20px
+    padding-bottom: 20px
+
+  /** PADDINGS EJE Y */
+  .no-padding-y-sm
+    padding-left: 0
+    padding-right: 0
+  .sm-padding-y-sm
+    padding-left: 5px
+    padding-right: 5px
+  .md-padding-y-sm
+    padding-left: 8px
+    padding-right: 8px
+  .lg-padding-y-sm
+    padding-left: 15px
+    padding-right: 15px
+  .xl-padding-y-sm
+    padding-left: 20px
+    padding-right: 20px
+
+/** PADDINGS PARA RESOLUCIÓN A PARTIR DE 768px */
+@media all and (min-width: 768px )
+  .no-padding-gb-md
+    padding: 0
+  .sm-padding-gb-md
+    padding: 5px
+  .md-padding-gb-md
+    padding: 8px
+  .lg-padding-gb-md
+    padding: 15px
+  .xl-padding-gb-md
+    padding: 20px
+
+  /** PADDINGS TOP */
+  .no-padding-tp-md
+    padding: 0
+  .sm-padding-tp-md
+    padding-top: 5px
+  .md-padding-tp-md
+    padding-top: 8px
+  .lg-padding-tp-md
+    padding-top: 15px
+  .xl-padding-tp-md
+    padding-top: 20px
+
+  /** PADDINGS BOTTOM */
+  .no-padding-bt-md
+    padding-bottom: 0
+  .sm-padding-bt-md
+    padding-bottom: 5px
+  .md-padding-bt-md
+    padding-bottom: 8px
+  .lg-padding-bt-md
+    padding-bottom: 15px
+  .xl-padding-bt-md
+    padding-bottom: 20px
+
+  /** PADDINGS LEFT */
+  .no-padding-lf-md
+    padding-left: 0
+  .sm-padding-lf-md
+    padding-left: 5px
+  .md-padding-lf-md
+    padding-left: 8px
+  .lg-padding-lf-md
+    padding-left: 15px
+  .xl-padding-lf-md
+    padding-left: 20px
+
+  /** PADDINGS RIGTH */
+  .no-padding-rg-md
+    padding-right: 0
+  .sm-padding-rg-md
+    padding-right: 5px
+  .md-padding-rg-md
+    padding-right: 8px
+  .lg-padding-rg-md
+    padding-right: 15px
+  .xl-padding-rg-md
+    padding-right: 20px
+
+  /** PADDINGS EJE X */
+  .no-padding-x-md
+    padding-top: 0
+    padding-bottom: 0
+  .sm-padding-x-md
+    padding-top: 5px
+    padding-bottom: 5px
+  .md-padding-x-md
+    padding-top: 8px
+    padding-bottom: 8px
+  .lg-padding-x-md
+    padding-top: 15px
+    padding-bottom: 15px
+  .xl-padding-x-md
+    padding-top: 20px
+    padding-bottom: 20px
+
+
+  /** PADDINGS EJE Y */
+  .no-padding-y-md
+    padding-left: 0
+    padding-right: 0
+  .sm-padding-y-md
+    padding-left: 5px
+    padding-right: 5px
+  .md-padding-y-md
+    padding-left: 8px
+    padding-right: 8px
+  .lg-padding-y-md
+    padding-left: 15px
+    padding-right: 15px
+  .xl-padding-y-md
+    padding-left: 20px
+    padding-right: 20px
+
+/** PADDINGS PARA RESOLUCIÓN A PARTIR DE 1024px */
+@media all and (min-width: 1024 )
+  .no-padding-gb-lg
+    padding: 0
+  .sm-padding-gb-lg
+    padding: 5px
+  .md-padding-gb-lg
+    padding: 8px
+  .lg-padding-gb-lg
+    padding: 15px
+  .xl-padding-gb-lg
+    padding: 20px
+
+  /** PADDINGS TOP */
+  .no-padding-tp-lg
+    padding: 0
+  .sm-padding-tp-lg
+    padding-top: 5px
+  .md-padding-tp-lg
+    padding-top: 8px
+  .lg-padding-tp-lg
+    padding-top: 15px
+  .xl-padding-tp-lg
+    padding-top: 20px
+
+  /** PADDINGS BOTTOM */
+  .no-padding-bt-lg
+    padding-bottom: 0
+  .sm-padding-bt-lg
+    padding-bottom: 5px
+  .md-padding-bt-lg
+    padding-bottom: 8px
+  .lg-padding-bt-lg
+    padding-bottom: 15px
+  .xl-padding-bt-lg
+    padding-bottom: 20px
+
+  /** PADDINGS LEFT */
+  .no-padding-lf-lg
+    padding-left: 0
+  .sm-padding-lf-lg
+    padding-left: 5px
+  .md-padding-lf-lg
+    padding-left: 8px
+  .lg-padding-lf-lg
+    padding-left: 15px
+  .xl-padding-lf-lg
+    padding-left: 20px
+
+  /** PADDINGS RIGTH */
+  .no-padding-rg-lg
+    padding-right: 0
+  .sm-padding-rg-lg
+    padding-right: 5px
+  .md-padding-rg-lg
+    padding-right: 8px
+  .lg-padding-rg-lg
+    padding-right: 15px
+  .xl-padding-rg-lg
+    padding-right: 20px
+
+  /** PADDINGS EJE X */
+  .no-padding-x-lg
+    padding-top: 0
+    padding-bottom: 0
+  .sm-padding-x-lg
+    padding-top: 5px
+    padding-bottom: 5px
+  .md-padding-x-lg
+    padding-top: 8px
+    padding-bottom: 8px
+  .lg-padding-x-lg
+    padding-top: 15px
+    padding-bottom: 15px
+  .xl-padding-x-lg
+    padding-top: 20px
+    padding-bottom: 20px
+
+  /** PADDINGS EJE Y */
+  .no-padding-y-lg
+    padding-left: 0
+    padding-right: 0
+  .sm-padding-y-lg
+    padding-left: 5px
+    padding-right: 5px
+  .md-padding-y-lg
+    padding-left: 8px
+    padding-right: 8px
+  .lg-padding-y-lg
+    padding-left: 15px
+    padding-right: 15px
+  .xl-padding-y-lg
+    padding-left: 20px
+    padding-right: 20px
+
+/** PADDINGS PARA RESOLUCIÓN A PARTIR DE 1440px */
+@media all and (min-width: 1440px )
+  .no-padding-gb-xl
+    padding: 0
+  .sm-padding-gb-xl
+    padding-top: 5px
+  .md-padding-gb-xl
+    padding: 8px
+  .lg-padding-gb-xl
+    padding: 15px
+  .xl-padding-gb-xl
+    padding: 20px
+
+  /** PADDINGS TOP */
+  .no-padding-tp-xl
+    padding: 0
+  .sm-padding-tp-xl
+    padding-top: 5px
+  .md-padding-tp-xl
+    padding-top: 8px
+  .lg-padding-tp-xl
+    padding-top: 15px
+  .xl-padding-tp-xl
+    padding-top: 20px
+
+  /** PADDINGS BOTTOM */
+  .no-padding-bt-xl
+    padding-bottom: 0
+  .sm-padding-bt-xl
+    padding-bottom: 5px
+  .md-padding-bt-xl
+    padding-bottom: 8px
+  .lg-padding-bt-xl
+    padding-bottom: 15px
+  .xl-padding-bt-xl
+    padding-bottom: 20px
+
+  /** PADDINGS LEFT */
+  .no-padding-lf-xl
+    padding-left: 0
+  .sm-padding-lf-xl
+    padding-left: 5px
+  .md-padding-lf-xl
+    padding-left: 8px
+  .lg-padding-lf-xl
+    padding-left: 15px
+  .xl-padding-lf-xl
+    padding-left: 20px
+
+  /** PADDINGS RIGTH */
+  .no-padding-rg-xl
+    padding-right: 0
+  .sm-padding-rg-xl
+    padding-right: 5px
+  .md-padding-rg-xl
+    padding-right: 8px
+  .lg-padding-rg-xl
+    padding-right: 15px
+  .xl-padding-rg-xl
+    padding-right: 20px
+
+  /** PADDINGS EJE X */
+  .no-padding-x-xl
+    padding-top: 0
+    padding-bottom: 0
+  .sm-padding-x-xl
+    padding-top: 5px
+    padding-bottom: 5px
+  .md-padding-x-xl
+    padding-top: 8px
+    padding-bottom: 8px
+  .lg-padding-x-xl
+    padding-top: 15px
+    padding-bottom: 15px
+  .xl-padding-x-xl
+    padding-top: 20px
+    padding-bottom: 20px
+
+  /** PADDINGS EJE Y */
+  .no-padding-y-xl
+    padding-left: 0
+    padding-right: 0
+  .sm-padding-y-xl
+    padding-left: 5px
+    padding-right: 5px
+  .md-padding-y-xl
+    padding-left: 8px
+    padding-right: 8px
+  .lg-padding-y-xl
+    padding-left: 15px
+    padding-right: 15px
+  .xl-padding-y-xl
+    padding-left: 20px
+    padding-right: 20px
+
+/** MARINGS RESOLUCION GLOBAL */
+.no-margin-gb-gb
+  margin: 0
+.sm-margin-gb-gb
+  margin: 5px
+.md-margin-gb-gb
+  margin: 8px
+.lg-margin-gb-gb
+  margin: 15px
+.xl-margin-gb-gb
+  margin: 20px
+
+/** MARGIN TOP */
+.no-margin-tp-gb
+  margin: 0
+.sm-margin-tp-gb
+  margin-top: 5px
+.md-margin-tp-gb
+  margin-top: 8px
+.lg-margin-tp-gb
+  margin-top: 15px
+.xl-margin-tp-gb
+  margin-top: 20px
+
+/** MARINGS BOTTOM */
+.no-margin-bt-gb
+  margin-bottom: 0
+.sm-margin-bt-gb
+  margin-bottom: 5px
+.md-margin-bt-gb
+  margin-bottom: 8px
+.lg-margin-bt-gb
+  margin-bottom: 15px
+.xl-margin-bt-gb
+  margin-bottom: 20px
+
+/** MARINGS LEFT */
+.no-margin-lf-gb
+  margin-left: 0
+.sm-margin-lf-gb
+  margin-left: 5px
+.md-margin-lf-gb
+  margin-left: 8px
+.lg-margin-lf-gb
+  margin-left: 15px
+.xl-margin-lf-gb
+  margin-left: 20px
+
+/** MARINGS RIGTH */
+.no-margin-rg-gb
+  margin-right: 0
+.sm-margin-rg-gb
+  margin-right: 5px
+.md-margin-rg-gb
+  margin-right: 8px
+.lg-margin-rg-gb
+  margin-right: 15px
+.xl-margin-rg-gb
+  margin-right: 20px
+
+/** MARINGS EJE X */
+.no-margin-x-gb
+  margin-top: 0
+  margin-bottom: 0
+.sm-margin-x-gb
+  margin-top: 5px
+  margin-bottom: 5px
+.md-margin-x-gb
+  margin-top: 8px
+  margin-bottom: 8px
+.lg-margin-x-gb
+  margin-top: 15px
+  margin-bottom: 15px
+.xl-margin-x-gb
+  margin-top: 20px
+  margin-bottom: 20px
+
+/** MARINGS EJE Y */
+.no-margin-y-gb
+  margin-left: 0
+  margin-right: 0
+.sm-margin-y-gb
+  margin-left: 5px
+  margin-right: 5px
+.md-margin-y-gb
+  margin-left: 8px
+  margin-right: 8px
+.lg-margin-y-gb
+  margin-left: 15px
+  margin-right: 15px
+.xl-margin-y-gb
+  margin-left: 20px
+  margin-right: 20px
+
+/** MARINGS PARA RESOLUCIÓN A PARTIR DE 480px */
+@media all and (min-width: 480px )
+  .no-margin-gb-sm
+    margin: 0
+  .sm-margin-gb-sm
+    margin: 5px
+  .md-margin-gb-sm
+    margin: 8px
+  .lg-margin-gb-sm
+    margin: 15px
+  .xl-margin-gb-sm
+    margin: 20px
+
+  /** MARINGS TOP */
+  .no-margin-tp-sm
+    margin: 0
+  .sm-margin-tp-sm
+    margin-top: 5px
+  .md-margin-tp-smsm
+    margin-top: 8px
+  .lg-margin-tp-sm
+    margin-top: 15px
+  .xl-margin-tp-sm
+    margin-top: 20px
+
+  /** MARINGS BOTTOM */
+  .no-margin-bt-sm
+    margin-bottom: 0
+  .sm-margin-bt-sm
+    margin-bottom: 5px
+  .md-margin-bt-sm
+    margin-bottom: 8px
+  .lg-margin-bt-sm
+    margin-bottom: 15px
+  .xl-margin-bt-sm
+    margin-bottom: 20px
+
+  /** MARINGS LEFT */
+  .no-margin-lf-sm
+    margin-left: 0
+  .sm-margin-lf-sm
+    margin-left: 5px
+  .md-margin-lf-sm
+    margin-left: 8px
+  .lg-margin-lf-sm
+    margin-left: 15px
+  .xl-margin-lf-sm
+    margin-left: 20px
+
+  /** MARINGS RIGTH */
+  .no-margin-rg-sm
+    margin-right: 0
+  .sm-margin-rg-sm
+    margin-right: 5px
+  .md-margin-rg-sm
+    margin-right: 8px
+  .lg-margin-rg-sm
+    margin-right: 15px
+  .xl-margin-rg-sm
+    margin-right: 20px
+
+  /** MARINGS EJE X */
+  .no-margin-x-sm
+    margin-top: 0
+    margin-bottom: 0
+  .sm-margin-x-sm
+    margin-top: 5px
+    margin-bottom: 5px
+  .md-margin-x-sm
+    margin-top: 8px
+    margin-bottom: 8px
+  .lg-margin-x-sm
+    margin-top: 15px
+    margin-bottom: 15px
+  .xl-margin-x-sm
+    margin-top: 20px
+    margin-bottom: 20px
+
+  /** MARINGS EJE Y */
+  .no-margin-y-sm
+    margin-left: 0
+    margin-right: 0
+  .sm-margin-y-sm
+    margin-left: 5px
+    margin-right: 5px
+  .md-margin-y-sm
+    margin-left: 8px
+    margin-right: 8px
+  .lg-margin-y-sm
+    margin-left: 15px
+    margin-right: 15px
+  .xl-margin-y-sm
+    margin-left: 20px
+    margin-right: 20px
+
+/** MARINGS PARA RESOLUCIÓN A PARTIR DE 768px */
+@media all and (min-width: 768px )
+  .no-margin-gb-md
+    margin: 0
+  .sm-margin-gb-md
+    margin: 5px
+  .md-margin-gb-md
+    margin: 8px
+  .lg-margin-gb-md
+    margin: 15px
+  .xl-margin-gb-md
+    margin: 20px
+
+  /** MARINGS TOP */
+  .no-margin-tp-md
+    margin: 0
+  .sm-margin-tp-md
+    margin-top: 5px
+  .md-margin-tp-md
+    margin-top: 8px
+  .lg-margin-tp-md
+    margin-top: 15px
+  .xl-margin-tp-md
+    margin-top: 20px
+
+  /** MARINGS BOTTOM */
+  .no-margin-bt-md
+    margin-bottom: 0
+  .sm-margin-bt-md
+    margin-bottom: 5px
+  .md-margin-bt-md
+    margin-bottom: 8px
+  .lg-margin-bt-md
+    margin-bottom: 15px
+  .xl-margin-bt-md
+    margin-bottom: 20px
+
+  /** MARINGS LEFT */
+  .no-margin-lf-md
+    margin-left: 0
+  .sm-margin-lf-md
+    margin-left: 5px
+  .md-margin-lf-md
+    margin-left: 8px
+  .lg-margin-lf-md
+    margin-left: 15px
+  .xl-margin-lf-md
+    margin-left: 20px
+
+  /** MARINGS RIGTH */
+  .no-margin-rg-md
+    margin-right: 0
+  .sm-margin-rg-md
+    margin-right: 5px
+  .md-margin-rg-md
+    margin-right: 8px
+  .lg-margin-rg-md
+    margin-right: 15px
+  .xl-margin-rg-md
+    margin-right: 20px
+
+  /** MARINGS EJE X */
+  .no-margin-x-md
+    margin-top: 0
+    margin-bottom: 0
+  .sm-margin-x-md
+    margin-top: 5px
+    margin-bottom: 5px
+  .md-margin-x-md
+    margin-top: 8px
+    margin-bottom: 8px
+  .lg-margin-x-md
+    margin-top: 15px
+    margin-bottom: 15px
+  .xl-margin-x-md
+    margin-top: 20px
+    margin-bottom: 20px
+
+  /** MARINGS EJE Y */
+  .no-margin-y-md
+    margin-left: 0
+    margin-right: 0
+  .sm-margin-y-md
+    margin-left: 5px
+    margin-right: 5px
+  .md-margin-y-md
+    margin-left: 8px
+    margin-right: 8px
+  .lg-margin-y-md
+    margin-left: 15px
+    margin-right: 15px
+  .xl-margin-y-md
+    margin-left: 20px
+    margin-right: 20px
+
+/** MARINGS PARA RESOLUCIÓN A PARTIR DE 1024px */
+@media all and (min-width: 1024 )
+  .no-margin-gb-lg
+    margin: 0
+  .sm-margin-gb-lg
+    margin: 5px
+  .md-margin-gb-lg
+    margin: 8px
+  .lg-margin-gb-lg
+    margin: 15px
+  .xl-margin-gb-lg
+    margin: 20px
+
+  /** MARINGS TOP */
+  .no-margin-tp-lg
+    margin: 0
+  .sm-margin-tp-lg
+    margin-top: 5px
+  .md-margin-tp-lg
+    margin-top: 8px
+  .lg-margin-tp-lg
+    margin-top: 15px
+  .xl-margin-tp-lg
+    margin-top: 20px
+
+  /** MARINGS BOTTOM */
+  .no-margin-bt-lg
+    margin-bottom: 0
+  .sm-margin-bt-lg
+    margin-bottom: 5px
+  .md-margin-bt-lg
+    margin-bottom: 8px
+  .lg-margin-bt-lg
+    margin-bottom: 15px
+  .xl-margin-bt-lg
+    margin-bottom: 20px
+
+  /** MARINGS LEFT */
+  .no-margin-lf-lg
+    margin-left: 0
+  .sm-margin-lf-lg
+    margin-left: 5px
+  .md-margin-lf-lg
+    margin-left: 8px
+  .lg-margin-lf-lg
+    margin-left: 15px
+  .xl-margin-lf-lg
+    margin-left: 20px
+
+  /** MARINGS RIGTH */
+  .no-margin-rg-lg
+    margin-right: 0
+  .sm-margin-rg-lg
+    margin-right: 5px
+  .md-margin-rg-lg
+    margin-right: 8px
+  .lg-margin-rg-lg
+    margin-right: 15px
+  .xl-margin-rg-lg
+    margin-right: 20px
+
+  /** MARINGS EJE X */
+  .no-margin-x-lg
+    margin-top: 0
+    margin-bottom: 0
+  .sm-margin-x-lg
+    margin-top: 5px
+    margin-bottom: 5px
+  .md-margin-x-lg
+    margin-top: 8px
+    margin-bottom: 8px
+  .lg-margin-x-lg
+    margin-top: 15px
+    margin-bottom: 15px
+  .xl-margin-x-lg
+    margin-top: 20px
+    margin-bottom: 20px
+
+  /** MARINGS EJE Y */
+  .no-margin-y-lg
+    margin-left: 0
+    margin-right: 0
+  .sm-margin-y-lg
+    margin-left: 5px
+    margin-right: 5px
+  .md-margin-y-lg
+    margin-left: 8px
+    margin-right: 8px
+  .lg-margin-y-lg
+    margin-left: 15px
+    margin-right: 15px
+  .xl-margin-y-lg
+    margin-left: 20px
+    margin-right: 20px
+
+/** MARINGS PARA RESOLUCIÓN A PARTIR DE 1440px */
+@media all and (min-width: 1440px )
+  .no-margin-gb-xl
+    margin: 0
+  .sm-margin-gb-xl
+    margin: 5px
+  .md-margin-gb-xl
+    margin: 8px
+  .lg-margin-gb-xl
+    margin: 15px
+  .xl-margin-gb-xl
+    margin: 20px
+
+  /** MARINGS TOP */
+  .no-margin-tp-xl
+    margin: 0
+  .sm-margin-tp-xl
+    margin-top: 5px
+  .md-margin-tp-xl
+    margin-top: 8px
+  .lg-margin-tp-xl
+    margin-top: 15px
+  .xl-margin-tp-xl
+    margin-top: 20px
+
+  /** MARINGS BOTTOM */
+  .no-margin-bt-xl
+    margin-bottom: 0
+  .sm-margin-bt-xl
+    margin-bottom: 5px
+  .md-margin-bt-xl
+    margin-bottom: 8px
+  .lg-margin-bt-xl
+    margin-bottom: 15px
+  .xl-margin-bt-xl
+    margin-bottom: 20px
+
+  /** MARINGS LEFT */
+  .no-margin-lf-xl
+    margin-left: 0
+  .sm-margin-lf-xl
+    margin-left: 5px
+  .md-margin-lf-xl
+    margin-left: 8px
+  .lg-margin-lf-xl
+    margin-left: 15px
+  .xl-margin-lf-xl
+    margin-left: 20px
+
+  /** MARINGS RIGTH */
+  .no-margin-rg-xl
+    margin-right: 0
+  .sm-margin-rg-xl
+    margin-right: 5px
+  .md-margin-rg-xl
+    margin-right: 8px
+  .lg-margin-rg-xl
+    margin-right: 15px
+  .xl-margin-rg-xl
+    margin-right: 20px
+
+  /** MARINGS EJE X */
+  .no-margin-x-xl
+    margin-top: 0
+    margin-bottom: 0
+  .sm-margin-x-xl
+    margin-top: 5px
+    margin-bottom: 5px
+  .md-margin-x-xl
+    margin-top: 8px
+    margin-bottom: 8px
+  .lg-margin-x-xl
+    margin-top: 15px
+    margin-bottom: 15px
+  .xl-margin-x-xl
+    margin-top: 20px
+    margin-bottom: 20px
+
+  /** MARINGS EJE Y */
+  .no-margin-y-xl
+    margin-left: 0
+    margin-right: 0
+  .sm-margin-y-xl
+    margin-left: 5px
+    margin-right: 5px
+  .md-margin-y-xl
+    margin-left: 8px
+    margin-right: 8px
+  .lg-margin-y-xl
+    margin-left: 15px
+    margin-right: 15px
+  .xl-margin-y-xl
+    margin-left: 20px
+    margin-right: 20px
+
+/** BORDES RESOLUCION GLOBAL */
+.no-border-gb-gb
+  border: 0 solid
+.sm-border-gb-gb
+  border: 2px solid
+.md-border-gb-gb
+  border: 4px solid
+.lg-border-gb-gb
+  border: 6px solid
+.xl-border-gb-gb
+  border: 8px solid
+
+/** BORDERS TOP */
+.no-border-tp-gb
+  border-top: 0
+.sm-border-tp-gb
+  border-top: 2px solid
+.md-border-tp-gb
+  border-top: 4px solid
+.lg-border-tp-gb
+  border-top: 6px solid
+.xl-border-tp-gb
+  border-top: 8px solid
+
+/** BORDERS BOTTOM */
+.no-border-bt-gb
+  border-bottom: 0
+.sm-border-bt-gb
+  border-bottom: 2px solid
+.md-border-bt-gb
+  border-bottom: 4px solid
+.lg-border-bt-gb
+  border-bottom: 6px solid
+.xl-border-bt-gb
+  border-bottom: 8px solid
+
+/** BORDERS LEFT */
+.no-border-lf-gb
+  border-left: 0
+.sm-border-lf-gb
+  border-left: 2px solid
+.md-border-lf-gb
+  border-left: 4px solid
+.lg-border-lf-gb
+  border-left: 6px solid
+.xl-border-lf-gb
+  border-left: 8px solid
+
+/** BORDERS RIGTH */
+.no-border-rg-gb
+  border-right: 0
+.sm-border-rg-gb
+  border-right: 2px solid
+.md-border-rg-gb
+  border-right: 4px solid
+.lg-border-rg-gb
+  border-right: 6px solid
+.xl-border-rg-gb
+  border-right: 8px solid
+
+/** BORDERS EJE X */
+.no-border-x-gb
+  border-top: 0
+  border-bottom: 0
+.sm-border-x-gb
+  border-top: 2px solid
+  border-bottom: 2px solid
+.md-border-x-gb
+  border-top: 4px solid
+  border-bottom: 4px solid
+.lg-border-x-gb
+  border-top: 6px solid
+  border-bottom: 6px solid
+.xl-border-x-gb
+  border-top: 8px solid
+  border-bottom: 8px solid
+
+/** BORDERS EJE Y */
+.no-border-y-gb
+  border-left: 0
+  border-right: 0
+.sm-border-y-gb
+  border-left: 2px solid
+  border-right: 2px solid
+.md-border-y-gb
+  border-left: 4px solid
+  border-right: 4px solid
+.lg-border-y-gb
+  border-left: 6px solid
+  border-right: 6px solid
+.xl-border-y-gb
+  border-left: 8px solid
+  border-right: 8px solid
+
+/** BORDERS PARA RESOLUCIÓN A PARTIR DE 480px */
+@media all and (min-width: 480px )
+  .no-border-gb-sm
+    border: 0 solid
+  .sm-border-gb-sm
+    border: 2px solid
+  .md-border-gb-sm
+    border: 4px solid
+  .lg-border-gb-sm
+    border: 6px solid
+  .xl-border-gb-sm
+    border: 8px solid
+
+  /** BORDERS TOP */
+  .no-border-tp-sm
+    border-top: 0
+  .sm-border-tp-sm
+    border-top: 2px solid
+  .md-border-tp-sm
+    border-top: 4px solid
+  .lg-border-tp-sm
+    border-top: 6px solid
+  .xl-border-tp-sm
+    border-top: 8px solid
+
+  /** BORDERS BOTTOM */
+  .no-border-bt-sm
+    border-bottom: 0
+  .sm-border-bt-sm
+    border-bottom: 2px solid
+  .md-border-bt-sm
+    border-bottom: 4px solid
+  .lg-border-bt-sm
+    border-bottom: 6px solid
+  .xl-border-bt-sm
+    border-bottom: 8px solid
+
+  /** BORDERS LEFT */
+  .no-border-lf-sm
+    border-left: 0
+  .sm-border-lf-sm
+    border-left: 2px solid
+  .md-border-lf-sm
+    border-left: 4px solid
+  .lg-border-lf-sm
+    border-left: 6px solid
+  .xl-border-lf-sm
+    border-left: 8px solid
+
+  /** BORDERS RIGTH */
+  .no-border-rg-sm
+    border-right: 0
+  .sm-border-rg-sm
+    border-right: 2px solid
+  .md-border-rg-sm
+    border-right: 4px solid
+  .lg-border-rg-sm
+    border-right: 6px solid
+  .xl-border-rg-sm
+    border-right: 8px solid
+
+  /** BORDERS EJE X */
+  .no-border-x-sm
+    border-top: 0
+    border-bottom: 0
+  .sm-border-x-sm
+    border-top: 2px solid
+    border-bottom: 2px solid
+  .md-border-x-sm
+    border-top: 4px solid
+    border-bottom: 4px solid
+  .lg-border-x-sm
+    border-top: 6px solid
+    border-bottom: 6px solid
+  .xl-border-x-sm
+    border-top: 8px solid
+    border-bottom: 8px solid
+
+  /** BORDERS EJE Y */
+  .no-border-y-sm
+    border-left: 0
+    border-right: 0
+  .sm-border-y-sm
+    border-left: 2px solid
+    border-right: 2px solid
+  .md-border-y-sm
+    border-left: 4px solid
+    border-right: 4px solid
+  .lg-border-y-sm
+    border-left: 6px solid
+    border-right: 6px solid
+  .xl-border-y-sm
+    border-left: 8px solid
+    border-right: 8px solid
+
+/** BORDERS PARA RESOLUCIÓN A PARTIR DE 768px */
+@media all and (min-width: 768px )
+  .no-border-gb-md
+    border: 0 solid
+  .sm-border-gb-md
+    border: 2px solid
+  .md-border-gb-md
+    border: 4px solid
+  .lg-border-gb-md
+    border: 6px solid
+  .xl-border-gb-md
+    border: 8px solid
+
+  /** BORDERS TOP */
+  .no-border-tp-md
+    border-top: 0
+  .sm-border-tp-md
+    border-top: 2px solid
+  .md-border-tp-md
+    border-top: 4px solid
+  .lg-border-tp-md
+    border-top: 6px solid
+  .xl-border-tp-md
+    border-top: 8px solid
+
+  /** BORDERS BOTTOM */
+  .no-border-bt-md
+    border-bottom: 0
+  .sm-border-bt-md
+    border-bottom: 2px solid
+  .md-border-bt-md
+    border-bottom: 4px solid
+  .lg-border-bt-md
+    border-bottom: 6px solid
+  .xl-border-bt-md
+    border-bottom: 8px solid
+
+  /** BORDERS LEFT */
+  .no-border-lf-md
+    border-left: 0
+  .sm-border-lf-md
+    border-left: 2px solid
+  .md-border-lf-md
+    border-left: 4px solid
+  .lg-border-lf-md
+    border-left: 6px solid
+  .xl-border-lf-md
+    border-left: 8px solid
+
+  /** BORDERS RIGTH */
+  .no-border-rg-md
+    border-right: 0
+  .sm-border-rg-md
+    border-right: 2px solid
+  .md-border-rg-md
+    border-right: 4px solid
+  .lg-border-rg-md
+    border-right: 6px solid
+  .xl-border-rg-md
+    border-right: 8px solid
+
+  /** BORDERS EJE X */
+  .no-border-x-md
+    border-top: 0
+    border-bottom: 0
+  .sm-border-x-md
+    border-top: 2px solid
+    border-bottom: 2px solid
+  .md-border-x-md
+    border-top: 4px solid
+    border-bottom: 4px solid
+  .lg-border-x-md
+    border-top: 6px solid
+    border-bottom: 6px solid
+  .xl-border-x-md
+    border-top: 8px solid
+    border-bottom: 8px solid
+
+  /** BORDERS EJE Y */
+  .no-border-y-md
+    border-left: 0
+    border-right: 0
+  .sm-border-y-md
+    border-left: 2px solid
+    border-right: 2px solid
+  .md-border-y-md
+    border-left: 4px solid
+    border-right: 4px solid
+  .lg-border-y-md
+    border-left: 6px solid
+    border-right: 6px solid
+  .xl-border-y-md
+    border-left: 8px solid
+    border-right: 8px solid
+
+/** BORDERS PARA RESOLUCIÓN A PARTIR DE 1024px */
+@media all and (min-width: 1024 )
+  .no-border-gb-lg
+    border: 0 solid
+  .sm-border-gb-lg
+    border: 2px solid
+  .md-border-gb-lg
+    border: 4px solid
+  .lg-border-gb-lg
+    border: 6px solid
+  .xl-border-gb-lg
+    border: 8px solid
+
+  /** BORDERS TOP */
+  .no-border-tp-lg
+    border-top: 0
+  .sm-border-tp-lg
+    border-top: 2px solid
+  .md-border-tp-lg
+    border-top: 4px solid
+  .lg-border-tp-lg
+    border-top: 6px solid
+  .xl-border-tp-lg
+    border-top: 8px solid
+
+  /** BORDERS BOTTOM */
+  .no-border-bt-lg
+    border-bottom: 0
+  .sm-border-bt-lg
+    border-bottom: 2px solid
+  .md-border-bt-lg
+    border-bottom: 4px solid
+  .lg-border-bt-lg
+    border-bottom: 6px solid
+  .xl-border-bt-lg
+    border-bottom: 8px solid
+
+  /** BORDERS LEFT */
+  .no-border-lf-lg
+    border-left: 0
+  .sm-border-lf-lg
+    border-left: 2px solid
+  .md-border-lf-lg
+    border-left: 4px solid
+  .lg-border-lf-lg
+    border-left: 6px solid
+  .xl-border-lf-lg
+    border-left: 8px solid
+
+  /** BORDERS RIGTH */
+  .no-border-rg-lg
+    border-right: 0
+  .sm-border-rg-lg
+    border-right: 2px solid
+  .md-border-rg-lg
+    border-right: 4px solid
+  .lg-border-rg-lg
+    border-right: 6px solid
+  .xl-border-rg-lg
+    border-right: 8px solid
+
+  /** BORDERS EJE X */
+  .no-border-x-lg
+    border-top: 0
+    border-bottom: 0
+  .sm-border-x-lg
+    border-top: 2px solid
+    border-bottom: 2px solid
+  .md-border-x-lg
+    border-top: 4px solid
+    border-bottom: 4px solid
+  .lg-border-x-lg
+    border-top: 6px solid
+    border-bottom: 6px solid
+  .xl-border-x-lg
+    border-top: 8px solid
+    border-bottom: 8px solid
+
+  /** BORDERS EJE Y */
+  .no-border-y-lg
+    border-left: 0
+    border-right: 0
+  .sm-border-y-lg
+    border-left: 2px solid
+    border-right: 2px solid
+  .md-border-y-lg
+    border-left: 4px solid
+    border-right: 4px solid
+  .lg-border-y-lg
+    border-left: 6px solid
+    border-right: 6px solid
+  .xl-border-y-lg
+    border-left: 8px solid
+    border-right: 8px solid
+
+/** BORDERS PARA RESOLUCIÓN A PARTIR DE 1440px */
+@media all and (min-width: 1440px )
+  .no-border-gb-xl
+    border: 0 solid
+  .sm-border-gb-xl
+    border: 2px solid
+  .md-border-gb-xl
+    border: 4px solid
+  .lg-border-gb-xl
+    border: 6px solid
+  .xl-border-gb-xl
+    border: 8px solid
+
+  /** BORDERS TOP */
+  .no-border-tp-xl
+    border-top: 0
+  .sm-border-tp-xl
+    border-top: 2px solid
+  .md-border-tp-xl
+    border-top: 4px solid
+  .lg-border-tp-xl
+    border-top: 6px solid
+  .xl-border-tp-xl
+    border-top: 8px solid
+
+  /** BORDERS BOTTOM */
+  .no-border-bt-xl
+    border-bottom: 0
+  .sm-border-bt-xl
+    border-bottom: 2px solid
+  .md-border-bt-xl
+    border-bottom: 4px solid
+  .lg-border-bt-xl
+    border-bottom: 6px solid
+  .xl-border-bt-xl
+    border-bottom: 8px solid
+
+  /** BORDERS LEFT */
+  .no-border-lf-xl
+    border-left: 0
+  .sm-border-lf-xl
+    border-left: 2px solid
+  .md-border-lf-xl
+    border-left: 4px solid
+  .lg-border-lf-xl
+    border-left: 6px solid
+  .xl-border-lf-xl
+    border-left: 8px solid
+
+  /** BORDERS RIGTH */
+  .no-border-rg-xl
+    border-right: 0
+  .sm-border-rg-xl
+    border-right: 2px solid
+  .md-border-rg-xl
+    border-right: 4px solid
+  .lg-border-rg-xl
+    border-right: 6px solid
+  .xl-border-rg-xl
+    border-right: 8px solid
+
+  /** BORDERS EJE X */
+  .no-border-x-xl
+    border-top: 0
+    border-bottom: 0
+  .sm-border-x-xl
+    border-top: 2px solid
+    border-bottom: 2px solid
+  .md-border-x-xl
+    border-top: 4px solid
+    border-bottom: 4px solid
+  .lg-border-x-xl
+    border-top: 6px solid
+    border-bottom: 6px solid
+  .xl-border-x-xl
+    border-top: 8px solid
+    border-bottom: 8px solid
+
+  /** BORDERS EJE Y */
+  .no-border-y-xl
+    border-left: 0
+    border-right: 0
+  .sm-border-y-xl
+    border-left: 2px solid
+    border-right: 2px solid
+  .md-border-y-xl
+    border-left: 4px solid
+    border-right: 4px solid
+  .lg-border-y-xl
+    border-left: 6px solid
+    border-right: 6px solid
+  .xl-border-y-xl
+    border-left: 8px solid
+    border-right: 8px solid
+
+/*** COLORES DE BORDES ****/
+
+.border-color-green
+  border-color: Green
+.border-color-blue
+  border-color: Blue
+.border-color-silver
+  border-color: Silver
+.border-color-clouds
+  border-color Clouds
+.border-color-white
+  border-color white
+.border-color-white-a
+  border-color rgba(255,255,255, 0.5)
+
+
+/****** BORDERS RADIO *******/
+
+.sm-border-radio
+  border-radius: 4px
+.md-border-radio
+  border-radius: 8px
+.lg-border-radio
+  border-radius: 16px
+.circule-border-radio
+  border-radius: 50%
+
+.border-dotted-x
+    border-top: 2px dashed rgba(255,255,255, 0.3)
+    border-bottom: 2px dashed rgba(255,255,255, 0.3)
+
+
+/** CLASES PARA IMAGENES **/
+.pd-background-image
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+/** TITULOS  H */
+
+/***
+  Instrucciones para títulos
+
+  1.- Tamaño del letra
+    + xl
+    + lg
+    + md
+    + sm
+  2.- Se agrega title
+  3.- Selecciona font-weight
+    + bold
+    + light
+  4.- Resolución desde la que se aplicará
+    +  gb (Todas las resoluciones)
+    +  xl (A partir de 1440px)
+    +  lg (A partir de 1024px)
+    +  md (A partir de 768px)
+    +  sm (A partir de 480px)
+  Cada variable separada por guion medio
+  Ejem
+  xl-title-bold-xl
+
+***/
+/* ESTILOS POR DEFECTO A LOS H  */
+h1
+  font-size: 34px
+  margin 0
+h2
+  font-size 28px
+  margin 0
+h3
+  font-size: 24px
+  margin 0
+h4
+  font-size 20px
+  margin 0
+
+.big-title-bold-gb
+  font-size 75px
+  font-weight: bold;
+
+.big-title-light-gb
+  font-size 75px
+  font-weight: lighter;
+
+.xl-title-bold-gb
+  font-size 24px
+  font-weight: bold;
+
+.lg-title-bold-gb
+  font-size: 22px
+  font-weight: bold;
+
+.md-title-bold-gb
+  font-size: 20px
+  font-weight: bold;
+
+.sm-title-bold-gb
+  font-size: 18px
+  font-weight: bold;
+
+.xl-title-light-gb
+  font-size 24px
+  font-weight: lighter;
+
+.lg-title-light-gb
+  font-size: 22px
+  font-weight: lighter;
+
+.md-title-light-gb
+  font-size: 20px
+  font-weight: lighter;
+
+.sm-title-light-gb
+  font-size: 18px
+  font-weight: lighter;
+/** TITULOS A PARTIR DE RESOLUCION SMALL (480PX) **/
+@media all and (min-width: 480px)
+  .xl-title-bold-sm
+    font-size 24px
+    font-weight: bold;
+
+  .lg-title-bold-sm
+    font-size: 22px
+    font-weight: bold;
+
+  .md-title-bold-sm
+    font-size: 20px
+    font-weight: bold;
+
+  .sm-title-bold-sm
+    font-size: 18px
+    font-weight: lighter;
+
+  .xl-title-light-sm
+    font-size 24px
+    font-weight: lighter;
+
+  .lg-title-light-sm
+    font-size: 22px
+    font-weight: lighter;
+
+  .md-title-light-sm
+    font-size: 20px
+    font-weight: lighter;
+
+  .sm-title-light-sm
+    font-size: 18px
+    font-weight: lighter;
+
+/** TITULOS A PARTIR DE RESOLUCION MEDIUM (768PX) **/
+@media all and (min-width: 768px)
+  .xl-title-bold-md
+    font-size 24px
+    font-weight: bold;
+
+  .lg-title-bold-md
+    font-size: 22px
+    font-weight: bold;
+
+  .md-title-bold-md
+    font-size: 20px
+    font-weight: bold;
+
+  .sm-title-bold-md
+    font-size: 18px
+    font-weight: lighter;
+
+  .xl-title-light-md
+    font-size 24px
+    font-weight: lighter;
+
+  .lg-title-light-md
+    font-size: 22px
+    font-weight: lighter;
+
+  .md-title-light-md
+    font-size: 20px
+    font-weight: lighter;
+
+  .sm-title-light-md
+    font-size: 18px
+    font-weight: lighter;
+
+  /** TITULOS A PARTIR DE RESOLUCION LARGE (1024PX) **/
+  @media all and (min-width: 1024px)
+    .xl-title-bold-lg
+      font-size 24px
+      font-weight: bold;
+
+    .lg-title-bold-lg
+      font-size: 22px
+      font-weight: bold;
+
+    .md-title-bold-lg
+      font-size: 20px
+      font-weight: bold;
+
+    .sm-title-bold-lg
+      font-size: 18px
+      font-weight: lighter;
+
+    .xl-title-light-lg
+      font-size 24px
+      font-weight: lighter;
+
+    .lg-title-light-lg
+      font-size: 22px
+      font-weight: lighter;
+
+    .md-title-light-lg
+      font-size: 20px
+      font-weight: lighter;
+
+    .sm-title-light-lg
+      font-size: 18px
+      font-weight: lighter;
+
+/** TITULOS A PARTIR DE RESOLUCION EXTRA-LARGE (1440PX) **/
+@media all and (min-width: 1440px)
+  .xl-title-bold-xl
+    font-size 24px
+    font-weight: bold;
+
+  .lg-title-bold-xl
+    font-size: 22px
+    font-weight: bold;
+
+  .md-title-bold-xl
+    font-size: 20px
+    font-weight: bold;
+
+  .sm-title-bold-xl
+    font-size: 18px
+    font-weight: lighter;
+
+  .xl-title-light-xl
+    font-size 24px
+    font-weight: lighter;
+
+  .lg-title-light-xl
+    font-size: 22px
+    font-weight: lighter;
+
+  .md-title-light-xl
+    font-size: 20px
+    font-weight: lighter;
+
+  .sm-title-light-xl
+    font-size: 18px
+    font-weight: lighter;
+
+//Colores de redes sociales
+
+.color-fb
+  color #3b5998
+.color-tw
+  color #55acee
+.color-gp
+  color #da2713
+.color-in
+  color #0177b5
+
+/*** ALIGN TEXT ***/
+/**
+
+**/
+
+.text-center
+  text-align: center;
+.text-right
+  text-align: right;
+.text-left
+  text-align: left;
+.text-justify
+  text-align: justify;
+
+@media all and (min-width: 480px)
+  .text-center-sm
+    text-align: center;
+  .text-right-sm
+    text-align: right;
+  .text-left-sm
+    text-align: left;
+  .text-justify-sm
+    text-align: justify;
+
+@media all and (min-width: 768px)
+  .text-center-md
+    text-align: center;
+  .text-right-md
+    text-align: right;
+  .text-left-md
+    text-align: left;
+  .text-justify-md
+    text-align: justify;
+
+@media all and (min-width: 768px)
+  .text-center-lg
+    text-align: center;
+  .text-right-lg
+    text-align: right;
+  .text-left-lg
+    text-align: left;
+  .text-justify-lg
+    text-align: justify;
+
+@media all and (min-width: 768px)
+  .text-center-xl
+    text-align: center;
+  .text-right-xl
+    text-align: right;
+  .text-left-xl
+    text-align: left;
+  .text-justify-xl
+    text-align: justify;
+
+
+/*** TAMAÑO P ***/
+.text-sm
+  font-size 12px
+.text-md
+  font-size: 15px
+.text-lg
+  font-size: 18px
+.text-xl
+  font-size: 21px
+
+@media all and (min-width : 480px)
+  .sm-text-sm
+    font-size 12px
+  .md-text-sm
+    font-size: 15px
+  .lg-text-sm
+    font-size: 18px
+  .xl-text-sm
+    font-size: 21px
+
+@media all and (min-width : 768px)
+  .sm-text-md
+    font-size 12px
+  .md-text-md
+    font-size: 15px
+  .lg-text-md
+    font-size: 18px
+  .xl-text-md
+    font-size: 21px
+@media all and (min-width : 1024px)
+  .sm-text-lg
+    font-size 12px
+  .md-text-lg
+    font-size: 15px
+  .lg-text-lg
+    font-size: 18px
+  .xl-text-lg
+    font-size: 21px
+
+@media all and (min-width : 1440px)
+  .sm-text-xl
+    font-size 12px
+  .md-text-xl
+    font-size: 15px
+  .lg-text-xl
+    font-size: 18px
+  .xl-text-xl
+    font-size: 21px
+
+/******** JUSTIFICAR ELEMENTOS  ***********/
+
+.justify-center
+  justify-content: center;
+.justify-left
+  justify-content: flex-start;
+.justify-right
+  justify-content: flex-end;
+.justify-around
+  justify-content: space-around;
+.justify-between
+  justify-content space-between;
+
+/******* ALINEAR ELEMENTOS **************/
+
+.align-center
+  align-items: center;
+.align-top
+  align-items: flex-start;
+.align-bottom
+  align-items: flex-end;
+
+
+/******** ESTILOS PARA LISTAS **********/
+ul
+  margin: 0
+  padding: 0
+
+
+/****** ESTILOS PARA HIDE Y SHOW ******/
+& .hide
+  display: none
+
+@media all and (max-width: 1439px)
+  & .hide-lg
+    display: none
+@media all and (max-width: 1023px)
+  & .hide-md
+    display: none
+@media all and (max-width: 767px)
+  & .hide-sm
+    display: none
+
+& .show
+  display: block;
+
+@media all and (min-width: 1024px)
+  & .show-lg
+    display: block
+@media all and (min-width: 768px)
+  & .show-md
+    display: block
+@media all and (min-width: 480px)
+  & .show-sm
+    display: block
+
+@media all and (min-width: 1024px)
+  & .show-only-lg
+    display: block
+@media all and (min-width: 768px) and (max-width: 1023px)
+  & .show-only-md
+    display: block
+@media all and  (max-width: 768px)
+  & .show-only-sm
+    display: block
+/******  FLOATS  **********/
+.float-left
+  float: left
+.float-right
+  float right;
+
+/********** CURSOR *********/
+.pointer
+  cursor: pointer;
+
+
+//Colores flat
+
+.color-tq
+  color #1abc9c
+.color-em
+  color #7ed6df
+.color-pr
+  color #3498db
+.color-wt
+  color #8e44ad
+.color-sf
+  color #f1c40f
+.color-ct
+  color #e67e22
+.color-az
+  color #e74c3c
+
+.background-tq
+  background #1abc9c
+.background-em
+  background #7ed6df
+.background-pr
+  background #3498db
+.background-wt
+  background #8e44ad
+.background-sf
+  background #f1c40f
+.background-ct
+  background #e67e22
+.background-az
+  background #e74c3c

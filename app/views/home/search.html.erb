@@ -1,0 +1,31 @@
+<% @title = "Resultados de: "+ params[:search] +" | Blog de Diseño"%>
+
+
+<article class="xl-padding-x-gb pd-container" style="background: #f0f2fa">
+	<div class="col-18">
+		<h1 class="title-posts xl-padding-x-gb">Post encontrados segun tu busqueda: <%= params[:search] %></h1>
+        <article class="xl-padding-x-gb pd-container" >
+    <div class="col-16">
+        <div class="masonry-layout">
+            <% @publications.each do |publication| %>
+
+                <div class="blog-card">
+                    <a class="card-link col-20" href="/publicacion/<%= publication.id%>">
+                        <article class="col-20">
+                            <%= cl_image_tag(publication.image,:width=>300, :height=>300, :crop=>:fill,:quality=>100, :class=> 'post-image')%>
+                            <div class="article-details">
+                                <h4 class="post-category"><%= publication.category.name %></h4>
+                                <h3 class="post-title"><%= publication.title%></h3>
+                                <p class="post-description"><%= publication.preview.truncate(90)%></p>
+                                <p class="post-author"><%= publication.user.first_name %></p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+            <% end %>
+        </div>
+    </div>
+</article>
+			</div>
+</article>

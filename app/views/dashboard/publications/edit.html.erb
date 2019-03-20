@@ -1,0 +1,52 @@
+<section id="new-publication" class="p-form">
+	<article class="p-container">
+		<h1>Nueva Publicacion</h1>
+		<%= form_for @publication, url: dashboard_publication_path(id: @publication.id), :html => { :multipart => true }  do |f| %>
+		  <% if @publication.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+		      <ul>
+		      <% @publication.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+
+		  <div class="p-field">
+		    <%= f.label :title, "TITULO DE LA PUBLICACION" %>
+		    <%= f.text_field :title %>
+		  </div>
+
+		  <div class="p-field">
+		    <%= f.label :preview, "PREVIEW DE LA PUBLICACION" %>
+		    <%= f.text_field :preview %>
+		  </div>
+
+		  <div class="p-field">
+		    <%= f.label :image, "IMAGEN PREVIEW" %>
+		    <%= f.file_field :image %>
+		  </div>
+
+		  <div class="p-field">
+		    <%= f.label :article, "CONTENIDO DE LA PUBLICACION" %>
+		    <%= f.text_area :article %>
+		  </div>
+
+		  <div class="p-field">
+		    <%= f.label :category_id, "CATEGORIA" %>
+		    <%= f.select(:category_id) do %>
+		    	<% @categories.each do |c| %>
+					<%= content_tag(:option, c.name, value: c.id) %>
+				<% end %>
+		    <% end %>
+		  </div>
+
+		  <%= f.hidden_field :user_id, value: current_user.id%>
+
+		  <%= f.submit "GUARDAR", class: "p-save" %>
+		<% end %>
+	</article>
+</section>
+	

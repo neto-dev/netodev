@@ -1,0 +1,19 @@
+<% @title = "Ernesto | Blog"%>
+
+<section class="cards-wrapper">
+    <% @publications.each do |publication|%>
+        <div class="card-grid-space">
+            <div class="num fc-white"><%= publication.id %></div>
+            <a class="card" href="/blog/<%= publication.id %>" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(34, 47, 62, 1.0) 100%), url(<%= cl_image_path publication.image%>)">
+                <div class="xl-padding-x-gb">
+                    <h1 class="lg-padding-x-gb"><%= publication.title %></h1>
+                    <p><%= publication.preview.truncate(30) %></p>
+                    <div class="date"><%= publication.created_at.strftime("%d/%m/%y") %></div>
+                    <div class="tags xl-margin-x-gb">
+                        <div class="tag"><%= publication.category.name%></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    <% end %>
+</section>

@@ -1,0 +1,42 @@
+<section id="dashboard-publications pd-container">
+  <article class="publications col-15 pd-item">
+    <div class="pd-item-flex fc-text no-margin-gb padding-main-topbar xl-padding-bt-gb justify-between">
+      <h1 class="no-margin-gb-gb no-padding-gb-gb xl-title-light-gb">Publicaciones</h1>
+      <div>
+        <%= link_to 'Nueva Publicacion', new_dashboard_publication_path, class: "fc-white bg-blue lg-border-radio md-padding-x-gb lg-padding-y-gb" %>
+      </div>
+    </div>
+    <hr>
+    <% if @publications != nil %>
+      <div class="content pd-container justify-left">
+        <% @publications.each do |publication| %>
+          <div class="publication md-border-radio bg-white col-5 xl-margin-gb-gb ">
+            <%= cl_image_tag(publication.image, :quality=>100, :radius=>:max, :width=>40, :height=>40, :crop=>:fill)  %>
+            <div class="pd-item-flex justify-between aling-center">
+              <h2 class="fc-text md-padding-gb-gb md-title-light-gb no-margin-gb-gb">
+                <%= publication.title %>
+              </h2>
+              <div class="menu md-padding-gb-gb pd-flex">
+                <%= link_to edit_dashboard_publication_path(publication.id), class: "text-xl fc-green md-margin-gb-gb" do %>
+                  <span class="ion-ios-compose-outline"></span>
+                <% end %>
+                <%= link_to dashboard_publication_path(publication), method: :delete, class: "text-xl fc-green md-margin-gb-gb", data: { confirm: '¿Estas seguro?' } do%>
+                  <span class="ion-ios-trash-outline"></span>
+                <% end %>
+              </div>
+            </div>
+            <hr>
+            <div>
+              <p class="fc-text md-text lg-padding-x-gb md-padding-y-gb no-margin-gb-gb"> <%= publication.preview %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <h2 class="no-margin-gb-gb padding-main-topbar lg-title-light-gb fc-text text-center">
+        No se encuentra ninguna publicacion registrada
+      </h2>
+    <% end %>
+  </article>
+</section>
+
